@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ng-app="ngBoilerplate" ng-controller="AppCtrl">
+<head>
+	<title ng-bind="pageTitle"></title>
+
+	<!-- social media tags -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@joshdmiller">
+	<meta name="twitter:title" content="ngBoilerplate">
+	<meta name="twitter:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
+	<meta name="twitter:creator" content="@joshdmiller">
+	<meta name="twitter:image:src" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846">
+	<meta property="og:title" content="ngBoilerplate" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://bit.ly/ngBoilerplate" />
+	<meta property="og:image" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846" />
+	<meta property="og:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- font awesome from BootstrapCDN -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+	<!-- inject:css -->
+	<link rel="stylesheet" href="/assets/ngbp-0.3.2.css">
+	<!-- endinject -->
+	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+	<!-- inject:js -->
+	<script src="/vendor/angular/angular.js"></script>
+	<script src="/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="/vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
+	<script src="/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="/vendor/angular-resource/angular-resource.min.js"></script>
+	<script src="/vendor/angular-animate/angular-animate.min.js"></script>
+	<script src="/vendor/angular-localStorageService/src/storageprovider.js"></script>
+	<script src="/vendor/angular-flash-messages/angular-flash.js"></script>
+	<script src="/vendor/lodash/dist/lodash.min.js"></script>
+	<script src="/vendor/angular-google-maps/dist/angular-google-maps.js"></script>
+	<script src="/src/app/app.js"></script>
+	<script src="/src/app/about/about.js"></script>
+	<script src="/src/app/home/home.js"></script>
+	<script src="/src/common/plusOne/plusOne.js"></script>
+	<script src="/templates-app.js"></script>
+	<!-- endinject -->
+
+</head>
+<body>
+
+<div style="height:0; overflow: hidden;">
+	<!-- inject:svg --><svg xmlns="http://www.w3.org/2000/svg"><symbol id="ngbp-camera" viewBox="0 0 72.896 69.554">
+<g xmlns="http://www.w3.org/2000/svg">
+	<path fill="#FFFFFF" d="M0,54.983v-34c0-2.681,0.949-4.971,2.846-6.869c1.897-1.897,4.187-2.846,6.868-2.846h8.5l1.935-5.161   c0.48-1.239,1.36-2.309,2.637-3.207s2.586-1.347,3.928-1.347h19.429c1.34,0,2.649,0.449,3.927,1.347   c1.277,0.898,2.156,1.967,2.637,3.207l1.936,5.161h8.5c2.681,0,4.971,0.949,6.868,2.846c1.897,1.897,2.846,4.188,2.846,6.869v34   c0,2.682-0.948,4.971-2.846,6.868s-4.187,2.846-6.868,2.846H9.714c-2.682,0-4.971-0.948-6.868-2.846   C0.949,59.954,0,57.665,0,54.983z M24.418,25.973c-3.327,3.327-4.99,7.33-4.99,12.01s1.663,8.684,4.99,12.01   c3.326,3.327,7.33,4.99,12.01,4.99c4.68,0,8.683-1.664,12.01-4.99c3.326-3.326,4.99-7.33,4.99-12.01s-1.664-8.684-4.99-12.01   c-3.327-3.326-7.33-4.99-12.01-4.99C31.748,20.983,27.745,22.647,24.418,25.973z M28.707,45.705   c-2.138-2.137-3.207-4.711-3.207-7.722c0-3.01,1.068-5.584,3.207-7.722c2.137-2.138,4.711-3.207,7.722-3.207   c3.01,0,5.584,1.069,7.722,3.207c2.137,2.138,3.206,4.712,3.206,7.722c0,3.011-1.069,5.584-3.206,7.722   c-2.138,2.138-4.712,3.207-7.722,3.207C33.418,48.912,30.844,47.843,28.707,45.705z"/>
+</g>
+</symbol></svg><!-- endinject -->
+</div>
+<div class="container">
+	<div class="navbar navbar-default">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" ng-init="menuCollapsed = true"
+					ng-click="menuCollapsed = ! menuCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="navbar-brand">
+				ngbp
+				<small>
+					<a href="https://github.com/jforaker/ngbp-gulp/wiki">
+						v 0.1
+					</a>
+				</small>
+			</div>
+		</div>
+		<div class="collapse navbar-collapse" collapse="menuCollapsed">
+			<ul class="nav navbar-nav">
+				<li ui-sref-active="active">
+					<a href ui-sref="home">
+						<i class="fa fa-home"></i>
+						Instagram loco
+					</a>
+				</li>
+				<li ui-sref-active="active">
+					<a href ui-sref="about">
+						<i class="fa fa-info-circle"></i>
+						about
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container" ui-view="main"></div>
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-inner">
+			<p>
+				Based on <a href="http://www.joshdavidmiller.com">Josh David Miller</a>'s ngbp.
+				<a href="https://github.com/jforaker/ngbp-gulp">Fork this</a>
+				to kickstart your next project.
+				<br />
+				ngbp is based on
+				<a href="http://www.angularjs.org">AngularJS</a>,
+				<a href="http://getbootstrap.com">Bootstrap</a>,
+				<a href="http://angular-ui.github.com/bootstrap">UI Bootstrap</a>,
+				and
+				<a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a>.
+			</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
