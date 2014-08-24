@@ -5,8 +5,15 @@
 		<div class="col-lg-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<input ng-model="query">
-					<button class="btn btn-primary" ng-click="doSearch(query)"> Search</button>
+					<form id="myForm" class="form-inline form-search" name="myForm">
+						<input type="text" ng-model="query">
+						<button class="btn btn-primary" ng-click="doSearch()"> Search</button>
+							<!--<label>Search for-->
+							<!--<input id="in" type="text" ng-model="searchTerm" class="search-query input-medium" />-->
+						<!--</label>-->
+						<!--<button class="btn btn-primary" ng-click="doSearch()"> Search</button>-->
+					</form>
+
 				</div>
 				<div class="panel-body">
 					<ul class="horizontal-slide">

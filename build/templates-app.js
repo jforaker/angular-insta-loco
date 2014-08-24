@@ -284,8 +284,15 @@ app.run(["$templateCache", function($templateCache) {
     "		<div class=\"col-lg-12\">\n" +
     "			<div class=\"panel panel-default\">\n" +
     "				<div class=\"panel-heading\">\n" +
-    "					<input ng-model=\"query\">\n" +
-    "					<button class=\"btn btn-primary\" ng-click=\"doSearch(query)\"> Search</button>\n" +
+    "					<form id=\"myForm\" class=\"form-inline form-search\" name=\"myForm\">\n" +
+    "						<input type=\"text\" ng-model=\"query\">\n" +
+    "						<button class=\"btn btn-primary\" ng-click=\"doSearch()\"> Search</button>\n" +
+    "							<!--<label>Search for-->\n" +
+    "							<!--<input id=\"in\" type=\"text\" ng-model=\"searchTerm\" class=\"search-query input-medium\" />-->\n" +
+    "						<!--</label>-->\n" +
+    "						<!--<button class=\"btn btn-primary\" ng-click=\"doSearch()\"> Search</button>-->\n" +
+    "					</form>\n" +
+    "\n" +
     "				</div>\n" +
     "				<div class=\"panel-body\">\n" +
     "					<ul class=\"horizontal-slide\">\n" +
