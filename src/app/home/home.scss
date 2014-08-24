@@ -1,7 +1,7 @@
 .jumbotron {
   margin: 40px 0 80px 0;
   text-align: center;
-  background: beige;
+  background: greenyellow;
 
   @include MQ(medium){
 	background: $gray;
@@ -24,3 +24,52 @@
   }
 }
 
+.panel-default > .panel-heading:before{
+  width:25px;
+}
+
+.panel-default .alert{
+  display: none;
+}
+
+.instagram-list{
+  padding: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.instagram-list .instagram-item{
+  padding:0;
+  list-style: none;
+  display: inline-block;
+  margin: 5px;
+  border: 3px solid #975E4A;
+}
+
+.instagram-list .instagram-item:hover{
+  border-color:#0168C7;
+}
+
+.v-center {
+  margin-top:7%;
+}
+.angular-google-map-container {
+  height: 400px;
+}
+
+ul.horizontal-slide {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+ul.horizontal-slide li[class*="span"] {
+  display: inline-block;
+  float: none;
+}
+
+ul.horizontal-slide li[class*="span"]:first-child {
+  margin-left: 0;
+}

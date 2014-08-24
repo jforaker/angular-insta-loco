@@ -1,106 +1,55 @@
-<div class="jumbotron">
-  <h1>Non-Trivial AngularJS Made Easy</h1>
 
-  <p class="lead">
-    Everything you need to kickstart AngularJS projects: a best-practice
-    directory structure, an intelligent build system, and the best web design
-    libraries around.
-  </p>
+<div class="container" style="margin-left: -15px">
 
-  <ul class="list-inline social-buttons">
-    <li plus-one></li>
-  </ul>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<input ng-model="query">
+					<button class="btn btn-primary" ng-click="doSearch(query)"> Search</button>
+				</div>
+				<div class="panel-body">
+					<ul class="horizontal-slide">
+						<li class="span2" ng-repeat="item in insta.items">
+							<a class="thumbnail" data-id="{{item.id}}" ng-href="{{item.link}}">
+								<img width="180" height="180" ng-src="{{ item.images.low_resolution.url }}" src="" alt="">
+							</a>
+						</li>
+					</ul>
+					<div ng-show="insta.error" class="alert alert-danger">
+						<strong>Warning!</strong><br/>{{insta.error}}.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  <div class="btn-group">
-    <a href="https://github.com/ngbp/ngbp#readme" class="btn btn-large btn-default">
-      <i class="fa fa-book"></i>
-      Read the Docs
-    </a>
-    <a href="https://github.com/ngbp/ngbp" class="btn btn-large btn-success">
-      <i class="fa fa-download"></i>
-      Download
-    </a>
-  </div>
+	<google-map center="map.center" zoom="map.zoom" dragging="map.dragging"
+				events="map.events" draggable="true" options="map.options" bounds="map.bounds" control="map.control">
+		<markers models="randomMarkers" coords="'self'" icon="'icon'" mouseover="'onHover" click="'onClick'">
 
+			<windows show="show">
+				<div ng-non-bindable>
+					<h4>{{data.caption.text}}</h4>
+					<h5>{{data.user.username}}</h5>
+					<img width="180" height="180" src="{{data.images.low_resolution.url}}">
+				</div>
+
+			</windows>
+		</markers>
+	</google-map>
+
+	<hr>
+
+
+
+	<div class="row">
+		<div class="col-lg-12">
+			<br>
+			<br>
+			<p class="pull-right"><a href="">asdf</a> | Jake</p>
+			<br>
+			<br>
+		</div>
+	</div>
 </div>
-
-<div class="marketing">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h4><i class="fa fa-thumbs-up"></i> Good to Go!</h4>
-      <p>
-        Kickstarts your project quickly, with everything you need, so you can
-        focus on what matters: your app.
-      </p>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h4><i class="fa fa-magic"></i> Complete Build System</h4>
-      <p>
-        A smart, <a href="http://gulpjs.com">Gulp</a>-based build system
-        designed to save you time and energy.
-      </p>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h4><i class="fa fa-retweet"></i> Modularization</h4>
-      <p>
-        Supports a structure that maintains separation of concerns while
-        ensuring maximum code reuse.
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h4><i class="fa fa-star"></i> AngularJS</h4>
-      <p>
-        JavaScript framework that augments browser-based, single-page
-        applications with MVC functionality.
-        <a href="http://angularjs.org">More &raquo;</a>
-      </p>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h4><i class="fa fa-resize-small"></i> SASS CSS</h4>
-      <p>
-        The dynamic stylesheet language that extends CSS with efficiency.
-        <a href="http://sass-lang.com/">More &raquo;</a>
-      </p>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h4><i class="fa fa-twitter"></i> Twitter Bootstrap</h4>
-      <p>
-        Sleek, intuitive, and powerful front-end framework for faster and easier
-        web development.
-        <a href="http://getbootstrap.com">More &raquo;</a>
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h4><i class="fa fa-circle"></i> Angular UI Bootstrap</h4>
-      <p>
-        Pure AngularJS components for Bootstrap written by the
-        <a href="https://github.com/angular-ui?tab=members">AngularUI Team</a>.
-        <a href="http://angular-ui.github.com/bootstrap">More &raquo;</a>
-      </p>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h4><i class="fa fa-flag"></i> Font Awesome</h4>
-      <p>
-        The iconic font designed for use with Twitter Bootstrap.
-        <a href="http://fortawesome.github.com/Font-Awesome">
-          More &raquo;
-        </a>
-      </p>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <h4><i class="fa fa-asterisk"></i> Placeholders</h4>
-      <p>
-        Client-side image and text placeholder directives written in pure
-        AngularJS to make designing mock-ups wicked-fast.
-        <a href="http://joshdmiller.github.com/angular-placeholders">
-          More &raquo;
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
-

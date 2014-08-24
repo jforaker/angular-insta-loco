@@ -74,7 +74,10 @@ module.exports = {
 			'vendor/angular-animate/angular-animate.min.js',
 			'vendor/angular-route/angular-route.min.js',
 			'vendor/angular-localStorageService/src/storageprovider.js',
-			'vendor/angular-flash-messages/angular-flash.js'
+			'vendor/angular-flash-messages/angular-flash.js',
+			'vendor/lodash/dist/lodash.min.js',
+			'vendor/angular-google-maps/dist/angular-google-maps.js'
+
 		],
 		css: [
 		],
