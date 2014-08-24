@@ -1,0 +1,18 @@
+{
+  "name": "angular-mocks",
+  "version": "1.2.23-build.397+sha.888b0f5",
+  "main": "./angular-mocks.js",
+  "dependencies": {
+    "angular": "1.2.23-build.397+sha.888b0f5"
+  },
+  "homepage": "https://github.com/angular/bower-angular-mocks",
+  "_release": "1.2.23-build.397+sha.888b0f5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.23-build.397+sha.888b0f5",
+    "commit": "9496365e660ea5e8134084a6004e2c1614545fc0"
+  },
+  "_source": "git://github.com/angular/bower-angular-mocks.git",
+  "_target": "~1.2",
+  "_originalSource": "angular-mocks"
+}
