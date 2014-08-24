@@ -1,0 +1,16 @@
+{
+  "name": "angular",
+  "version": "1.2.23-build.397+sha.888b0f5",
+  "main": "./angular.js",
+  "dependencies": {},
+  "homepage": "https://github.com/angular/bower-angular",
+  "_release": "1.2.23-build.397+sha.888b0f5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.23-build.397+sha.888b0f5",
+    "commit": "7947aa048d088a47731d078db3b18ba9d4ef68a4"
+  },
+  "_source": "git://github.com/angular/bower-angular.git",
+  "_target": "~1.2",
+  "_originalSource": "angular"
+}

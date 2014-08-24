@@ -4,6 +4,6 @@
 
 bin/
 node_modules/
-vendor/
+
 .DS_Store
 .idea
